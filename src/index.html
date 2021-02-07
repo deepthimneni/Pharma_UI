@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pharmacy Application</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <!-- build:css assets/css/styles.css -->
+    <link rel="stylesheet" href="assets/css/font-icons.css" type='text/css'>
+    <link rel="stylesheet" href="assets/css/animations.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="components/home/home.css" />
+    <!-- endbuild -->
+</head>
+
+<body data-ng-app="app">
+
+    <header id="site-header">
+        <div class="container">
+            <div class="pull-left logo">Pharmacy Application</div>
+            <ul class="pull-right menu">
+                <li><a href="#/">HOME</a></li>
+                <li><a href="#/">POPULAR</a></li>
+                <li><a href="#/">SEARCH</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section id="main">
+        <div class="container">
+            <ng-view></ng-view>
+        </div>
+    </section>
+
+    <!-- build:assets assets.min.js -->
+    <!-- ASSETS -->
+    <script src="assets/js/angular.min.js"></script>
+    <script src="assets/js/angular-animate.min.js"></script>
+    <script src="assets/js/angular-cookies.min.js"></script>
+    <script src="assets/js/angular-route.min.js"></script>
+    <script src="assets/js/angular-touch.min.js"></script>
+    <script src="assets/js/moment.min.js"></script>
+    <script src="assets/js/angular-moment.min.js"></script>
+    <script src="assets/js/angular-truncate.js"></script>
+    <script src="assets/js/angular-preload-image.min.js"></script>
+    <!-- / -->
+    <!-- endbuild -->
+    <!-- build:js app.min.js -->
+    <!-- MODULES -->
+    <script src="app.routes.js"></script>
+    <script src="app.config.js"></script>
+    <script src="app.core.js"></script>
+    <script src="app.services.js"></script>
+    <script src="app.js"></script>
+    <!-- / -->
+    <!-- SERVICES -->
+    <script src="services/api.fct.js"></script>
+    <!-- / -->
+    <!-- DIRECTIVES -->
+    <script src="components/home/home.drct.js"></script>
+    <!-- / -->
+</body>
+
+</html>
