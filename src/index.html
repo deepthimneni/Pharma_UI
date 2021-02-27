@@ -17,6 +17,15 @@
 
 <body data-ng-app="app">
 
+    <div class="jumbotron">
+        <div class="container">
+            <div class="col-sm-8 col-sm-offset-2">
+                <div ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }" ng-if="flash" ng-bind="flash.message"></div>
+                <div ng-view></div>
+            </div>
+        </div>
+    </div>
+<!--     
     <header id="site-header">
         <div class="container">
             <div class="pull-left logo">Pharmacy Application</div>
@@ -26,16 +35,17 @@
                 <li><a href="#/">SEARCH</a></li>
             </ul>
         </div>
-    </header>
-
+    </header> -->
+<!-- 
     <section id="main">
         <div class="container">
             <ng-view></ng-view>
         </div>
-    </section>
+    </section> -->
 
     <!-- build:assets assets.min.js -->
     <!-- ASSETS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="assets/js/angular.min.js"></script>
     <script src="assets/js/angular-animate.min.js"></script>
     <script src="assets/js/angular-cookies.min.js"></script>
@@ -57,9 +67,12 @@
     <!-- / -->
     <!-- SERVICES -->
     <script src="services/api.fct.js"></script>
+    <script src="services/authService.fct.js"></script>
     <!-- / -->
     <!-- DIRECTIVES -->
     <script src="components/home/home.drct.js"></script>
+    <script src="components/login/login.drct.js"></script>
+    <script src="components/register/register.drct.js"></script>
     <!-- / -->
 </body>
 
